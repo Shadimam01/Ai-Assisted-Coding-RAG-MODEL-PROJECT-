@@ -1,0 +1,15 @@
+streamlit
+langchain-core
+langchain-text-splitters
+langchain-chroma
+langchain-huggingface
+sentence-transformers
+chromadb
+pypdf
+python-docx
+python-dotenv
+
+# LLM providers (install the one you use; all three are fine to install)
+langchain-google-genai
+langchain-groq
+# langchain-ollama      # only for fully local models

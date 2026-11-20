@@ -1,0 +1,11 @@
+2026-10-16 10:21:03 INFO  payment-service Starting payment request id=88321
+2026-10-16 10:21:08 WARN  payment-service Gateway response slow (5002 ms)
+2026-10-16 10:21:13 ERROR payment-service Payment failed for order 88321
+Traceback (most recent call last):
+  File "payment/gateway.py", line 42, in charge
+    response = requests.post(GATEWAY_URL, json=payload, timeout=5)
+  File "requests/adapters.py", line 507, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='gateway.example.com', port=443): Max retries exceeded
+2026-10-16 10:21:14 ERROR payment-service Returning HTTP 503 to client
+2026-10-16 10:21:20 INFO  payment-service Request id=88322 started
